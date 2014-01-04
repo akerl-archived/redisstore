@@ -1,3 +1,6 @@
+require 'redis'
+require 'json'
+
 ##
 # Redis-backed Store designed for BasicCache
 
@@ -31,9 +34,10 @@ module RedisStore
       if key.nil?
         @raw.flushdb && {}
       else
+        key = prep(key)
         value = @raw.get key
         @raw.del key
-        value
+        parse value
       end
     end
 
@@ -41,14 +45,14 @@ module RedisStore
     # Retrieve a key
 
     def [](key)
-      @raw.get key
+      parse @raw.get(prep key)
     end
 
     ##
     # Set a key
 
     def []=(key, value)
-      @raw.set key
+      @raw.set prep(key), prep(value)
     end
 
     ##
@@ -62,14 +66,24 @@ module RedisStore
     # Check for a key in the store
 
     def include?(key)
-      @raw.exists key
+      @raw.exists prep(key)
     end
 
     ##
     # Array of keys in the store
 
     def keys
-      @raw.keys
+      @raw.keys.map { |x| parse x }
+    end
+
+    private
+
+    def prep(object)
+      Marshal.dump object
+    end
+
+    def parse(object)
+      Marshal.load object
     end
   end
 end
