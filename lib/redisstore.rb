@@ -3,7 +3,6 @@ require 'json'
 
 ##
 # Redis-backed Store designed for BasicCache
-
 module RedisStore
   class << self
     ##
@@ -16,7 +15,6 @@ module RedisStore
 
   ##
   # Redis-backed store object
-
   class Store
     attr_reader :raw
 
@@ -66,7 +64,7 @@ module RedisStore
     # Check for a key in the store
 
     def include?(key)
-      @raw.exists prep(key)
+      @raw.exists(prep key)
     end
 
     ##
