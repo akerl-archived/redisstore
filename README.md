@@ -6,6 +6,7 @@ redisstore
 [![Code Climate](https://codeclimate.com/github/akerl/redisstore.png)](https://codeclimate.com/github/akerl/redisstore)
 [![Coverage Status](https://coveralls.io/repos/akerl/redisstore/badge.png?branch=master)](https://coveralls.io/r/akerl/redisstore?branch=master)
 [![Build Status](https://travis-ci.org/akerl/redisstore.png?branch=master)](https://travis-ci.org/akerl/redisstore)
+[![MIT Licensed](http://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
 Redis storage backend for [BasicCache](https://github.com/akerl/basiccache)
 
