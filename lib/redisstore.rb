@@ -81,7 +81,7 @@ module RedisStore
     end
 
     def parse(object)
-      Marshal.load object
+      object.nil? ? nil : Marshal.load(object)
     end
   end
 end
