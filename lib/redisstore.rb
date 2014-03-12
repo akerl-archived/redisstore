@@ -1,5 +1,4 @@
 require 'redis'
-require 'json'
 
 ##
 # Redis-backed Store designed for BasicCache
