@@ -23,6 +23,12 @@ describe RedisStore do
       it 'creates a new store raw object' do
         expect(store.raw).to be_an_instance_of Redis
       end
+      it 'passes creation parameters to Redis' do
+        store = RedisStore::Store.new host: '127.0.0.1', port: 6379
+        store.raw.flushdb
+        store[:foo] = 'bar'
+        expect(store[:foo]).to eql 'bar'
+      end
     end
     describe '#clear!' do
       describe 'when given no argument' do
