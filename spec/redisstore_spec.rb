@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'set'
 
 describe RedisStore do
   describe '#new' do
@@ -9,7 +8,6 @@ describe RedisStore do
   end
 
   describe RedisStore::Store do
-    let(:keys) { [1, 2, 3, 4, 5, :foo, 'foo'].to_set }
     let(:store) do
       store = RedisStore::Store.new
       store.raw.flushdb
@@ -63,13 +61,13 @@ describe RedisStore do
     end
     describe '#include?' do
       it 'checks for a key in the store' do
-        expect(store.include? :fish).to be_false
-        expect(store.include? 1).to be_true
+        expect(store.include? :fish).to be_falsey
+        expect(store.include? 1).to be_truthy
       end
     end
     describe '#keys' do
       it 'lists the keys in the store' do
-        expect(store.keys.to_set).to eql keys
+        expect(store.keys.to_set).to match_array [1, 2, 3, 4, 5, :foo, 'foo']
       end
     end
   end
