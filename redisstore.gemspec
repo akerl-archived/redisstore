@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'redisstore'
-  s.version     = '0.1.1'
+  s.version     = '0.1.2'
   s.date        = Time.now.strftime("%Y-%m-%d")
 
   s.summary     = 'Redis Store for BasicCache'
@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split
   s.test_files  = `git ls-files spec/*`.split
 
-  s.add_dependency 'basiccache', '~> 0.1.0'
+  s.add_dependency 'basiccache', '~> 0.2.0'
   s.add_dependency 'redis', '~> 3.1.0'
 
   s.add_development_dependency 'rubocop', '~> 0.24.0'
