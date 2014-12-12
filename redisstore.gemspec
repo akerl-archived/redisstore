@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.test_files  = `git ls-files spec/*`.split
 
   s.add_dependency 'basiccache', '~> 0.2.2'
-  s.add_dependency 'redis', '~> 3.1.0'
+  s.add_dependency 'redis', '~> 3.2.0'
 
   s.add_development_dependency 'rubocop', '~> 0.28.0'
   s.add_development_dependency 'rake', '~> 10.4.0'
