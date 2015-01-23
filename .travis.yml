@@ -1,17 +1,17 @@
-language: ruby
-cache: bundler
-rvm:
-- 2.1.2
-- 2.1.1
-- 2.1.0
-- 2.0.0
-- 1.9.3
 services:
 - redis-server
+language: ruby
+cache: bundler
+sudo: false
+rvm:
+- 2.2.0
+- 2.1.5
+- 2.0.0-p598
+- 1.9.3-p551
 notifications:
   email: false
   irc:
-    channels:
-    - secure: UIu3fXiOsRxko8FGev7lImR256MZvouRHQqa4qejzuX7kLPGcSIzbZZ29W+r8zK8lvJFxjgoIe+LVZxKLrZGQ39fS6dtTKZBNsOmL+MBu1Xg12KCU2kuUu6t6rqXedWBaQkED6O4dvlDiOBuUdBZLF3uF+9ZRRtC3PguI/fo/VA=
     template:
     - "%{repository}/%{branch}/%{build_number}: %{message} -- %{build_url}"
+    channels:
+    - irc.oftc.net#akerl
