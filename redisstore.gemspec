@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name        = 'redisstore'
-  s.version     = '0.1.3'
+  s.version     = '1.0.0'
   s.date        = Time.now.strftime("%Y-%m-%d")
 
   s.summary     = 'Redis Store for BasicCache'
