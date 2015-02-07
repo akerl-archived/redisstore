@@ -15,13 +15,13 @@ module RedisStore
   ##
   # Redis-backed store object
   class Store
-    attr_reader :raw
+    attr_reader :data
 
     ##
     # Generate an empty store
 
     def initialize(params = {})
-      @raw = Redis.new(params)
+      @data = Redis.new(params)
     end
 
     ##
@@ -29,11 +29,11 @@ module RedisStore
 
     def clear!(key = nil)
       if key.nil?
-        @raw.flushdb && {}
+        @data.flushdb && {}
       else
         key = prep(key)
-        value = @raw.get key
-        @raw.del key
+        value = @data.get key
+        @data.del key
         parse value
       end
     end
@@ -42,35 +42,35 @@ module RedisStore
     # Retrieve a key
 
     def [](key)
-      parse @raw.get(prep key)
+      parse @data.get(prep key)
     end
 
     ##
     # Set a key
 
     def []=(key, value)
-      @raw.set prep(key), prep(value)
+      @data.set prep(key), prep(value)
     end
 
     ##
     # Return the size of the store
 
     def size
-      @raw.dbsize
+      @data.dbsize
     end
 
     ##
     # Check for a key in the store
 
     def include?(key)
-      @raw.exists(prep key)
+      @data.exists(prep key)
     end
 
     ##
     # Array of keys in the store
 
     def keys
-      @raw.keys.map { |x| parse x }
+      @data.keys.map { |x| parse x }
     end
 
     private

@@ -10,7 +10,7 @@ describe RedisStore do
   describe RedisStore::Store do
     let(:store) do
       store = RedisStore::Store.new
-      store.raw.flushdb
+      store.data.flushdb
       (1..5).each { |i| store[i] = i + 5 }
       store[:foo] = :bar
       store['foo'] = 'bar'
@@ -18,12 +18,12 @@ describe RedisStore do
     end
 
     describe '#initialize' do
-      it 'creates a new store raw object' do
-        expect(store.raw).to be_an_instance_of Redis
+      it 'creates a new store data object' do
+        expect(store.data).to be_an_instance_of Redis
       end
       it 'passes creation parameters to Redis' do
         store = RedisStore::Store.new host: '127.0.0.1', port: 6379
-        store.raw.flushdb
+        store.data.flushdb
         store[:foo] = 'bar'
         expect(store[:foo]).to eql 'bar'
       end
