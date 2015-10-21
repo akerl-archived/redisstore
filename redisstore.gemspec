@@ -1,5 +1,4 @@
 Gem::Specification.new do |s|
-
   s.name        = 'redisstore'
   s.version     = '1.0.0'
   s.date        = Time.now.strftime("%Y-%m-%d")
@@ -19,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rubocop', '~> 0.34.0'
   s.add_development_dependency 'rake', '~> 10.4.0'
-  s.add_development_dependency 'coveralls', '~> 0.8.0'
+  s.add_development_dependency 'codecov', '~> 0.1.1'
   s.add_development_dependency 'rspec', '~> 3.3.0'
   s.add_development_dependency 'fuubar', '~> 2.0.0'
 end

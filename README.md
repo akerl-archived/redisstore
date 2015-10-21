@@ -3,9 +3,9 @@ redisstore
 
 [![Gem Version](https://img.shields.io/gem/v/redisstore.svg)](https://rubygems.org/gems/redisstore)
 [![Dependency Status](https://img.shields.io/gemnasium/akerl/redisstore.svg)](https://gemnasium.com/akerl/redisstore)
-[![Code Climate](https://img.shields.io/codeclimate/github/akerl/redisstore.svg)](https://codeclimate.com/github/akerl/redisstore)
-[![Coverage Status](https://img.shields.io/coveralls/akerl/redisstore.svg)](https://coveralls.io/r/akerl/redisstore)
-[![Build Status](https://img.shields.io/travis/akerl/redisstore.svg)](https://travis-ci.org/akerl/redisstore)
+[![Build Status](https://img.shields.io/circleci/project/akerl/redisstore.svg)](https://circleci.com/gh/akerl/redisstore)
+[![Coverage Status](https://img.shields.io/codecov/c/github/akerl/redisstore.svg)](https://codecov.io/github/akerl/redisstore)
+[![Code Quality](https://img.shields.io/codacy/fb61940c13c142ef80580b0f2d6c9e37.svg)](https://www.codacy.com/app/akerl/redisstore)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
 Redis storage backend for [BasicCache](https://github.com/akerl/basiccache)
