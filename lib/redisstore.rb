@@ -1,4 +1,5 @@
 require 'redis'
+require 'set'
 
 ##
 # Redis-backed Store designed for BasicCache
