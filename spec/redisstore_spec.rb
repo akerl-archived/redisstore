@@ -61,8 +61,8 @@ describe RedisStore do
     end
     describe '#include?' do
       it 'checks for a key in the store' do
-        expect(store.include? :fish).to be_falsey
-        expect(store.include? 1).to be_truthy
+        expect(store.include?(:fish)).to be_falsey
+        expect(store.include?(1)).to be_truthy
       end
     end
     describe '#keys' do

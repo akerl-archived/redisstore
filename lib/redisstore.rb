@@ -43,7 +43,7 @@ module RedisStore
     # Retrieve a key
 
     def [](key)
-      parse @data.get(prep key)
+      parse @data.get(prep(key))
     end
 
     ##
@@ -64,7 +64,7 @@ module RedisStore
     # Check for a key in the store
 
     def include?(key)
-      @data.exists(prep key)
+      @data.exists prep(key)
     end
 
     ##
