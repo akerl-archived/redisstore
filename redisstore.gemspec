@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'basiccache', '~> 1.0.0'
   s.add_dependency 'redis', '~> 3.3.0'
 
-  s.add_development_dependency 'rubocop', '~> 0.48.0'
+  s.add_development_dependency 'rubocop', '~> 0.49.0'
   s.add_development_dependency 'rake', '~> 12.0.0'
   s.add_development_dependency 'codecov', '~> 0.1.1'
   s.add_development_dependency 'rspec', '~> 3.6.0'
