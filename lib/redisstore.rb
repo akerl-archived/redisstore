@@ -81,7 +81,9 @@ module RedisStore
     end
 
     def parse(object)
+      # rubocop:disable Security/MarshalLoad
       object.nil? ? nil : Marshal.load(object)
+      # rubocop:enable Security/MarshalLoad
     end
   end
 end
