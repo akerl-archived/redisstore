@@ -2,7 +2,6 @@ redisstore
 =========
 
 [![Gem Version](https://img.shields.io/gem/v/redisstore.svg)](https://rubygems.org/gems/redisstore)
-[![Dependency Status](https://img.shields.io/gemnasium/akerl/redisstore.svg)](https://gemnasium.com/akerl/redisstore)
 [![Build Status](https://img.shields.io/circleci/project/akerl/redisstore/master.svg)](https://circleci.com/gh/akerl/redisstore)
 [![Coverage Status](https://img.shields.io/codecov/c/github/akerl/redisstore.svg)](https://codecov.io/github/akerl/redisstore)
 [![Code Quality](https://img.shields.io/codacy/fb61940c13c142ef80580b0f2d6c9e37.svg)](https://www.codacy.com/app/akerl/redisstore)
