@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.test_files  = `git ls-files spec/*`.split
 
   s.add_dependency 'basiccache', '~> 1.0.0'
-  s.add_dependency 'redis', '~> 4.0.0'
+  s.add_dependency 'redis', '~> 4.1.0'
 
   s.add_development_dependency 'codecov', '~> 0.1.1'
   s.add_development_dependency 'fuubar', '~> 2.3.0'
